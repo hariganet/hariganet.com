@@ -1,0 +1,100 @@
+extends layout
+
+block content
+    nav.navbar.navbar-custom.zurui-shadow.menu.navbar-fixed-top(role='navigation')
+      .container
+        // Collect the nav links, forms, and other content for toggling
+        .collapse.navbar-collapse.navbar-right.navbar-main-collapse
+          ul.nav.navbar-nav
+            // Hidden li included to remove active class from about link when scrolled up past about section
+            li.hidden
+              a(href='#page-top')
+            li.page-scroll
+              a(href='#aboutme') About me 
+            li.page-scroll
+              a(href='#works') Works 
+            li.page-scroll
+              a(href='http://hariganet.hatenablog.com') Blog
+        // /.navbar-collapse
+      // /.container
+    section.intro
+      .intro-body
+        .container
+          .row
+            .col-md-1
+              h1.brand-heading.zurui-shadow hariganet
+    section#aboutme.container.content-section
+      .row
+        .col-md-8
+          h2 About me 
+          p 
+            | 美術制作と電子工作とプログラミングが好きなエンジニアです。
+            br 
+            | プログラミングとArduinoと美術制作を組み合わせて色々作ってます。
+            br
+            | 面白いことをするのが好き。
+            br
+            | 好きな言語：C++, JavaScript
+        .col-md-4
+          .skill-board
+            p スキル
+            a(href="#",data-toggle="tooltip",title="OpenCV")
+              img(src="img/logo/opencv_logo.jpg")     
+            a(href="#",data-toggle="tooltip",title="openFrameworks")
+              img(src="img/logo/of_logo.jpg")     
+            a(href="#",data-toggle="tooltip",title="Node.js")
+              img(src="img/logo/nodejs_logo.jpg")     
+            a(href="#",data-toggle="tooltip",title="HTML5")
+              img(src="img/logo/html5_logo.jpg")     
+            a(href="#",data-toggle="tooltip",title="Arduino")
+              img(src="img/logo/arduino_logo.jpg")     
+    section#works.content-section.text-center
+      .works-section
+        .container
+          .col-lg-8.col-lg-offset-2
+            h3 Works 
+            p
+              | 作った物たち
+    section
+      .container
+        .row
+          .col-md-8.text-center
+            .portfolio-item
+              .movieparent
+                .movie
+                  iframe(src="http://www.youtube.com/embed/oJlvvpy7hTk",frameborder="0",allowfullscreen)
+          .col-md-4
+            h4 レーザーハープ (2014/3)
+            p
+              | 動画左手の木枠に囲まれた中を通る光の弦を触るとドレミが鳴って、演奏可能な光のハープです。
+              | 右手奥の壁面にプロジェクターで投影している光の玉は演奏者の動きに合わせてふわふわ宙を舞います。
+            p
+              | 制作
+              ul ハードウェア
+                li Arduino Mega・・・光センサの入力制御・PCに値を送信
+                li 半導体レーザーモジュール・・・光の弦を出力
+                li CdSセル（光センサ）・・・レーザーが受光部に当たっているかで音のトリガーに
+              ul ソフトウェア 
+                li openFrameworks, ofxMaxmillion・・・Arduinoからの信号を元にドレミの音を生成し再生
+                li OpenCV・・・演奏者の動きを画像認識で取得
+    section.wrapper
+      .container
+        .row
+          .col-md-8
+            img.loading(src="img/others/indicator.gif")
+            .img-container
+          .col-md-4
+            h5 ねぷた制作 (2012/5 ~ 2012/11)
+            p
+              | ねぷた制作を行いました。
+    section
+    // Core JavaScript Files
+    script(src='js/jquery-1.10.2.min.js')
+    script(src='js/bootstrap-3.0.3.min.js')
+    script(src='js/jquery-1.3.easing.min.js')
+    script(src='js/imgloader.js')
+    script(src='js/fitter.js')
+    script(src='js/fadechanger.js')
+    script(src='js/transition.js')
+    // Custom Theme JavaScript
+    script(src='js/hariganet.js')
