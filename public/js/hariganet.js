@@ -22,8 +22,8 @@ $(function() {
 
 
   //スライダーギャラリー
-	// オプションの一括指定
-	var options = {
+	// オプションの一括指定-ねぷた
+	var optionsNeputa = {
 		imglist: [
       "img/neputa/neputa-up.jpg",
       "img/neputa/neputa-enkei.jpg",
@@ -38,8 +38,7 @@ $(function() {
       "img/neputa/three-hone.jpg",
       "img/neputa/neputa-yoko.jpg",
       "img/neputa/neputa.jpg",
-      "img/neputa/neputa-kage.jpg",
-      "img/neputa/shugou.jpg"
+      "img/neputa/neputa-kage.jpg"
 		],
 		width: 1200,
 		height: 896,
@@ -62,11 +61,48 @@ $(function() {
 	}
 	
 	// loader
-	$(".img-container").imgloader(options);
+	$(".img-container" + "#neputa").imgloader(optionsNeputa);
 
 	// transition
 	//$("#header a").transition();
 
+
+	// オプションの一括指定-針金細工
+	var optionsWireworks = {
+		imglist: [
+      "img/wireworks/zebra.jpg",
+      "img/wireworks/owl_side.jpg",
+      "img/wireworks/owl_front.jpg",
+      "img/wireworks/skull.jpg",
+      "img/wireworks/flog.jpg",
+      "img/wireworks/dragon.jpg",
+      "img/wireworks/rabbit.jpg"
+		],
+		width: 1200,
+		height: 896,
+		minWidth: 600,
+		minHeight: 400,
+		callback: function() {
+			var self = this;
+			
+			// ローディング表示を終了
+			$(".loading").hide();
+			// 末尾の要素をフェードイン
+			self.find("img").eq(-1).fadeIn(function() {
+				// フェード切り替え開始
+				self.fadechanger({ selector: "img" });
+			});
+
+			// fitter起動
+			//self.fitter(options);
+		}
+	}
+	
+	// loader
+	$(".img-container" + "#wireworks").imgloader(optionsWireworks);
+
+	// transition
+	//$("#header a").transition();
 
 
 });

@@ -12,7 +12,7 @@ block content
             li.page-scroll
               a(href='#aboutme') About me 
             li.page-scroll
-              a(href='#works') Works 
+              a(href='#works') Make 
             li.page-scroll
               a(href='http://hariganet.hatenablog.com') Blog
         // /.navbar-collapse
@@ -31,31 +31,31 @@ block content
             | 美術制作と電子工作とプログラミングが好きなエンジニアです。
             br 
             | プログラミングとArduinoと美術制作を組み合わせて色々作ってます。
-            br
-            | 面白いことをするのが好き。
+          p
+            | したいこと：テクノロジーと造形などの美術制作を組み合わせた制作 
             br
             | 好きな言語：C++, JavaScript
         .col-md-4
           .skill-board
             p スキル
-            a(href="#",data-toggle="tooltip",title="OpenCV")
-              img(src="img/logo/opencv_logo.jpg")     
             a(href="#",data-toggle="tooltip",title="openFrameworks")
               img(src="img/logo/of_logo.jpg")     
+            a(href="#",data-toggle="tooltip",title="OpenCV")
+              img(src="img/logo/opencv_logo.jpg")     
+            a(href="#",data-toggle="tooltip",title="Arduino")
+              img(src="img/logo/arduino_logo.jpg")     
             a(href="#",data-toggle="tooltip",title="Node.js")
               img(src="img/logo/nodejs_logo.jpg")     
             a(href="#",data-toggle="tooltip",title="HTML5")
               img(src="img/logo/html5_logo.jpg")     
-            a(href="#",data-toggle="tooltip",title="Arduino")
-              img(src="img/logo/arduino_logo.jpg")     
     section#works.content-section.text-center
       .works-section
         .container
           .col-lg-8.col-lg-offset-2
-            h3 Works 
+            h3 Make 
             p
               | 作った物たち
-    section
+    section.content-section
       .container
         .row
           .col-md-8.text-center
@@ -64,30 +64,58 @@ block content
                 .movie
                   iframe(src="http://www.youtube.com/embed/oJlvvpy7hTk",frameborder="0",allowfullscreen)
           .col-md-4
-            h4 レーザーハープ (2014/3)
+            p.works-name レーザーハープ (2014/3)
             p
-              | 動画左手の木枠に囲まれた中を通る光の弦を触るとドレミが鳴って、演奏可能な光のハープです。
+              | 動画左手の木枠に囲まれた中を通る光の弦(レーザー)を触るとドレミの音が鳴って、演奏ができる光のハープです。
+              br
               | 右手奥の壁面にプロジェクターで投影している光の玉は演奏者の動きに合わせてふわふわ宙を舞います。
             p
-              | 制作
-              ul ハードウェア
-                li Arduino Mega・・・光センサの入力制御・PCに値を送信
-                li 半導体レーザーモジュール・・・光の弦を出力
-                li CdSセル（光センサ）・・・レーザーが受光部に当たっているかで音のトリガーに
-              ul ソフトウェア 
-                li openFrameworks, ofxMaxmillion・・・Arduinoからの信号を元にドレミの音を生成し再生
-                li OpenCV・・・演奏者の動きを画像認識で取得
-    section.wrapper
+              | 制作方法
+            ソフトウェア
+            ul 
+              li openFrameworks, ofxMaxmillion・・・Arduinoからの信号を元にドレミの音を生成し再生
+              li OpenCV・・・演奏者の動きを画像認識で取得
+            ハードウェア
+            ul  
+              li Arduino Mega・・・光センサの入力情報をPCに送信
+              li 半導体レーザーモジュール・・・光の弦を出力
+    .space
+    section.content-section
       .container
         .row
           .col-md-8
             img.loading(src="img/others/indicator.gif")
-            .img-container
+            .wrapper
+              .img-container#neputa
           .col-md-4
-            h5 ねぷた制作 (2012/5 ~ 2012/11)
-            p
-              | ねぷた制作を行いました。
-    section
+            .img-message
+              p.works-name ねぷた制作 (2012/5 ~ 2012/11)
+              p
+                | 大阪府内にて、ねぷた制作を行いました。
+                br
+                | 出身大学の協力や、大学時代の知人・会社の同僚の協力を得て、青森県五所川原市の伝統行事『立ちねぷた』を大阪で再現したいと思い、高さ8m相当の立ちねぷたを有志で制作、出身大学にて展示を行いました。
+    .space
+    section.content-section
+      .container
+        .row
+          .col-md-8
+            img.loading(src="img/others/indicator.gif")
+            .wrapper
+              .img-container#wireworks
+          .col-md-4
+            .img-message
+              p.works-name 針金細工 (2007/3 ~ )
+              p
+                | 針金をペンチで曲げて動物などの模型を作っています。
+    .space
+    // Footer
+    footer.content-section
+      .container
+        .row
+          .col-md-6.col-md-offset-3.text-center
+            hr
+            p Copyright &copy; hariganet 2013
+    // /Footer
     // Core JavaScript Files
     script(src='js/jquery-1.10.2.min.js')
     script(src='js/bootstrap-3.0.3.min.js')
