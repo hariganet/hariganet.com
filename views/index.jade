@@ -7,15 +7,13 @@ block content
         .collapse.navbar-collapse.navbar-right.navbar-main-collapse
           ul.nav.navbar-nav
             // Hidden li included to remove active class from about link when scrolled up past about section
-            li.hidden
+            //li.hidden
               a(href='#page-top')
             li.page-scroll
               a(href='#aboutme') About me 
             li.page-scroll
               a(href='#works') Make 
-            li.page-scroll
-              a(href='http://hariganet.hatenablog.com') Blog
-        // /.navbar-collapse
+          //.navbar-collapse
       // /.container
     section.intro
       .intro-body
@@ -23,20 +21,22 @@ block content
           .row
             .col-md-1
               h1.brand-heading.zurui-shadow hariganet
+    .space
     section#aboutme.container.content-section
       .row
-        .col-md-8
+        .col-md-6
           h2 About me 
           p 
-            | 美術制作と電子工作とプログラミングが好きなエンジニアです。
-            br 
-            | プログラミングとArduinoと美術制作を組み合わせて色々作ってます。
+            | 絵画や造形などのアナログな制作と電子工作、プログラミングなどのデジタルな制作の好きなエンジニアです。
           p
-            | したいこと：テクノロジーと造形などの美術制作を組み合わせた制作 
+            | 主にopenFrameworks, OpenCV, Node.jsで開発してます。
             br
-            | 好きな言語：C++, JavaScript
+            | 特にコンピュータの低レイヤーなところを触れるC++が好きです。 
+          p
+            | デジタル技術による制作だけでなく、粘土細工や金属細工、ねぷた制作といった現実での立体的な美術制作が好きで、デジタルとアナログを組み合わせた表現を模索してます。
           p
             | このサイトはBootstrap 3とNode.js, expresでできています。
+        .col-md-2
         .col-md-4
           .skill-board
             p スキル
@@ -50,14 +50,13 @@ block content
               img(src="img/logo/nodejs_logo.jpg")     
             a(href="#",data-toggle="tooltip",title="HTML5")
               img(src="img/logo/html5_logo.jpg")     
-    section#works.content-section.text-center
-      .works-section
-        .container
-          .col-lg-8.col-lg-offset-2
-            h3 Make 
-            p
-              | 作った物たち
-    section.content-section
+    .space
+    section#works.content-section
+      .container
+        .row
+          .col-md-8
+            h2 Make 作った物たち
+      .space
       .container
         .row
           .col-md-8.text-center
@@ -68,47 +67,61 @@ block content
           .col-md-4
             p.works-name レーザーハープ (2014/3)
             p
-              | 動画左手の木枠に囲まれた中を通る光の弦(レーザー)を触るとドレミの音が鳴って、演奏ができる光のハープです。
-              br
-              | 右手奥の壁面にプロジェクターで投影している光の玉は演奏者の動きに合わせてふわふわ宙を舞います。
+              | レーザーで形作られた光の弦を触るとドレミの音が鳴って、演奏ができる光のハープです。
             p
-              | 制作方法
-            ソフトウェア
-            ul 
-              li openFrameworks, ofxMaxmillion・・・Arduinoからの信号を元にドレミの音を生成し再生
-              li OpenCV・・・演奏者の動きを画像認識で取得
-            ハードウェア
-            ul  
-              li Arduino Mega・・・光センサの入力情報をPCに送信
-              li 半導体レーザーモジュール・・・光の弦を出力
+              | Max及びArduinoにて制作
+    .space
+     section.content-section
+      .container
+        .row
+          .col-md-8.text-center
+            .portfolio-item
+              .movieparent
+                .movie
+                  iframe(src="http://www.youtube.com/embed/gD03VMqymyk",frameborder="0",allowfullscreen)
+          .col-md-4
+            p.works-name 光の玉のAR遊び (2014/2)
+            p
+              | 画面上をふわふわ舞う光の玉を手や体で動かして遊ぶことのできるARアプリです。
+              | PCアプリとスマホアプリで連携しており、スマホのタッチ操作の軌跡に沿って、画面に黄色い光を降らすことができます。
+            p
+              | 自作の動作検知アルゴリズムをOpenCVで開発し, openFrameworksで制作。スマホ側はWebアプリで制作し、サーバーにNode.jsを使用
     .space
     section.content-section
       .container
         .row
           .col-md-8
-            img.loading(src="img/others/indicator.gif")
+            //img.loading(src="img/others/indicator.gif")
             .wrapper
               .img-container#neputa
           .col-md-4
             .img-message
-              p.works-name ねぷた制作 (2012/5 ~ 2012/11)
+              p.works-name ねぷた制作 (2012/8 ~ 2012/11)
               p
-                | 大阪府内にて、ねぷた制作を行いました。
-                br
-                | 青森県五所川原市の伝統行事『立ちねぷた』を大阪で再現したいと思い、出身大学の協力や、大学時代の知人及び会社の同僚の協力を得て、高さ8m相当の立ちねぷたを有志で制作、出身大学にて展示しました。
+                | 大阪府内にて青森県の伝統行事『立ちねぷた』を再現する制作展示を行いました。 
+              p 
+                | 日常の景観や自然の中で、道行く人々の手作業で巨大建造物が出来上がっていくという空間や体験を演出したくて
+                | 自身の出身大学とかけ合い、人通りの多い大学内の芝生広場を制作環境として借り受け、広報・告知を実施しました。
+                | ねぷた制作の作業の中には、ねぷたの表面に紙を張るといった気軽に参加可能な軽作業もあり、人通りの多い作業場周辺で、
+                | 道行く人に声をかけ一緒に紙を張って貰い、制作体験を共有して貰うことで同時に口コミによる宣伝を狙いました。
+                | 展示当日は子供からお年寄りまで多数の方が見に来られ、一緒に記念写真を取るなどの形で楽しんで下さいました。 
+
     .space
     section.content-section
       .container
         .row
           .col-md-8
-            img.loading(src="img/others/indicator.gif")
+            //img.loading(src="img/others/indicator.gif")
             .wrapper
               .img-container#wireworks
           .col-md-4
             .img-message
-              p.works-name 針金細工 (2007/3 ~ )
+              p.works-name 針金細工 (2007/3 ~ 現在まで)
               p
-                | 針金をペンチで曲げて動物などの模型を作っています。
+                | 平面の紙に線を引くのではなくて、空間に3Dの線を引くことで立体的な絵を描きたくて、
+                | 針金を固定することで立体的な線が描ける針金細工をはじめました。
+                | また作品に線画の雰囲気を持たせることで針金細工の影も一つの絵として楽しめるように制作しています。
+                | 主に動物などの線画を針金で立体的に作っています。
     .space
     // Footer
     footer.content-section
