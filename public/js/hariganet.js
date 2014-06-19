@@ -75,8 +75,7 @@ $(function() {
       "img/wireworks/owl_front.jpg",
       "img/wireworks/skull.jpg",
       "img/wireworks/flog.jpg",
-      "img/wireworks/dragon.jpg",
-      "img/wireworks/rabbit.jpg"
+      "img/wireworks/dragon.jpg"
 		],
 		width: 1200,
 		height: 896,
